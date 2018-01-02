@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConfiguration", "CustomConfiguration\CustomConfiguration.csproj", "{E34067E6-7536-45AE-ACFB-F40C09E3F1FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingToFile", "LoggingToFile\LoggingToFile.csproj", "{461B04B6-2F1A-4495-BE95-A692B78C040F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E34067E6-7536-45AE-ACFB-F40C09E3F1FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E34067E6-7536-45AE-ACFB-F40C09E3F1FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E34067E6-7536-45AE-ACFB-F40C09E3F1FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{461B04B6-2F1A-4495-BE95-A692B78C040F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461B04B6-2F1A-4495-BE95-A692B78C040F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461B04B6-2F1A-4495-BE95-A692B78C040F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461B04B6-2F1A-4495-BE95-A692B78C040F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
