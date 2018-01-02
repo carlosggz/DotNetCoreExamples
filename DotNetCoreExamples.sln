@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingToFile", "LoggingToF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomMiddleware", "CustomMiddleware\CustomMiddleware.csproj", "{5CC0A216-40EE-429E-9910-F8C69CE4BC8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC", "IoC\IoC.csproj", "{3CF67890-2F0B-4993-A85C-4806AEB641DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5CC0A216-40EE-429E-9910-F8C69CE4BC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CC0A216-40EE-429E-9910-F8C69CE4BC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CC0A216-40EE-429E-9910-F8C69CE4BC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF67890-2F0B-4993-A85C-4806AEB641DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF67890-2F0B-4993-A85C-4806AEB641DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF67890-2F0B-4993-A85C-4806AEB641DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF67890-2F0B-4993-A85C-4806AEB641DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
