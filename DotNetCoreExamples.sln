@@ -1,20 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConfiguration", "CustomConfiguration\CustomConfiguration.csproj", "{E34067E6-7536-45AE-ACFB-F40C09E3F1FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomConfiguration", "CustomConfiguration\CustomConfiguration.csproj", "{E34067E6-7536-45AE-ACFB-F40C09E3F1FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingToFile", "LoggingToFile\LoggingToFile.csproj", "{461B04B6-2F1A-4495-BE95-A692B78C040F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggingToFile", "LoggingToFile\LoggingToFile.csproj", "{461B04B6-2F1A-4495-BE95-A692B78C040F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomMiddleware", "CustomMiddleware\CustomMiddleware.csproj", "{5CC0A216-40EE-429E-9910-F8C69CE4BC8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomMiddleware", "CustomMiddleware\CustomMiddleware.csproj", "{5CC0A216-40EE-429E-9910-F8C69CE4BC8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC", "IoC\IoC.csproj", "{3CF67890-2F0B-4993-A85C-4806AEB641DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoC", "IoC\IoC.csproj", "{3CF67890-2F0B-4993-A85C-4806AEB641DF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C673956-86CF-4480-B8A5-5BADCD56121A}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCache", "Cache\CustomCache.csproj", "{9C293AC5-9F42-4C1D-BC71-69CEB1A1EFF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{3CF67890-2F0B-4993-A85C-4806AEB641DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CF67890-2F0B-4993-A85C-4806AEB641DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CF67890-2F0B-4993-A85C-4806AEB641DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C293AC5-9F42-4C1D-BC71-69CEB1A1EFF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C293AC5-9F42-4C1D-BC71-69CEB1A1EFF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C293AC5-9F42-4C1D-BC71-69CEB1A1EFF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C293AC5-9F42-4C1D-BC71-69CEB1A1EFF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
