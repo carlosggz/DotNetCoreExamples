@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jwt Authentication</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h3>Jwt Authentication</h3>
+        <div class="row" id="jwtDiv">
+            <div class="col-xs-12 text-info">
+                Try to access to the "Get value from server" without a token and you will receive an error. <br/><br />
+                If you get the token first, you can get the value from the server side.
+            </div>
+            <div class="col-xs-12 text-danger" style="margin-top: 10px; display: none;" data-bind="visible: error()">
+                <b>Error:</b>&nbsp;
+                <span data-bind="text: error"></span>
+            </div>
+            <div class="col-xs-12" style="margin-top: 10px;display: none;" data-bind="visible: token()">
+                <b>Token:</b>&nbsp;
+                <span data-bind="text: token"></span>
+            </div>
+            <div class="col-xs-12" style="margin-top: 10px;">
+                <a href="#" data-bind="click: login, visible: !token()"><i class="glyphicon glyphicon-log-in"></i> Login</a>
+                <a href="#" data-bind="click: logout, visible: token()"><i class="glyphicon glyphicon-log-out"></i> Logout</a>
+            </div>
+            <div class="col-xs-12" style="margin-top: 10px;">
+                <a href="#" data-bind="click: load"><i class="glyphicon glyphicon-refresh"></i> Get value from server</a>
+                <span data-bind="visible: result()" style="display: none;">
+                    <br /><br />
+                    Last result: <span data-bind="text: result"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/knockout/knockout-3.4.2.js"></script>
+    <script src="js/jwtvm.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var vm = new JwtTestVm({
+                loginUrl: "/api/login",
+                timeUrl: "/api/time"
+            });
+
+            ko.applyBindings(vm, document.getElementById("jwtDiv"));
+        });
+    </script>
+</body>
+</html>
