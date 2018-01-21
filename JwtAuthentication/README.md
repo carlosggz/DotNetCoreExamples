@@ -1,6 +1,6 @@
 ﻿# JWT authentication
 
-This project shows how to create a custom authentication using based on a service and cookie.
+This project shows how to create a custom authentication using a Json Web Token.
 
 
 ## Instructions ##
