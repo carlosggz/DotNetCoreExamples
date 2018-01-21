@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace CookieAuthentication.Services
 {
-    public class UsersManagerService: IUsersManagerService
+    public class UsersService: IUsersService
     {
         private List<UserEntity> _users = new List<UserEntity>()
         {
             new UserEntity(){ UserName = "test", Password = "test", FullName = "Test User", Email = "test@test.com" }
         };
 
-        public UsersManagerService()
+        public UsersService()
         {}
 
         public UserEntity GetUserByAuth(string login, string password)

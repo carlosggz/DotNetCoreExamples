@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CookieAuthentication.Core
 {
-    public interface IUsersManagerService
+    public interface IUsersService
     {
         UserEntity GetUserByAuth(string login, string password);
     }

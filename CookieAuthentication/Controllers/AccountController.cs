@@ -16,9 +16,9 @@ namespace CookieAuthentication.Controllers
 {
     public class AccountController : BaseController
     {
-        IUsersManagerService _usersManager = null;
+        IUsersService _usersManager = null;
 
-        public AccountController(IUsersManagerService usersManager)
+        public AccountController(IUsersService usersManager)
         {
             _usersManager = usersManager;
         }

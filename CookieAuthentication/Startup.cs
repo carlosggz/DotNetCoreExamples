@@ -38,7 +38,7 @@ namespace CookieAuthentication
             services.AddAntiforgery(options => options.HeaderName = Constants.XrsfToken);
 
             services.AddMvc();
-            services.AddScoped<IUsersManagerService, UsersManagerService>();
+            services.AddScoped<IUsersService, UsersService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
