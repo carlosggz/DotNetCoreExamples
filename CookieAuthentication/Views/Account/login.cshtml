@@ -1,0 +1,46 @@
+﻿@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+<section id="sectionLogin">
+    <h3>Login</h3>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12 text-danger" data-bind="visible: errors().length > 0" style="display: none;">
+            <h5>Please, fix the following errors:</h5>
+            <ul data-bind="foreach: errors">
+                <li><span data-bind="text: $data"></span></li>
+            </ul>
+        </div>
+    </div>
+    <form class="well col-sm-6 col-xs-12" id="frmLogin">
+        <div class="form-group">
+            <label for="txtUserName">User Name (test)</label>
+            <input type="text" class="form-control" id="txtUserName" placeholder="User Name" data-bind="value: uid, enable: !inProgress()">
+        </div>
+        <div class="form-group">
+            <label for="txtPassword">Password (test)</label>
+            <input type="password" class="form-control" id="txtPassword" placeholder="Password" data-bind="value: pwd, enable: !inProgress()">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" data-bind="click: login, visible: !inProgress()">
+                <i class="glyphicon glyphicon-log-in"></i> Login
+            </button>
+            <span data-bind="visible: inProgress()" style="display: none;"><i class="glyphicon glyphicon-ok"></i> Please wait....</span>
+        </div>
+    </form>
+</section>
+@section Scripts
+    {
+    <script src="~/lib/knockout/knockout-3.4.2.js"></script>
+    <script src="~/js/login-vm.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var vm = new LoginVm({
+                url: "@Url.Action("Login")",
+                uid: "test",
+                pwd: "test",
+                xsrf: "@Xsrf.GetAndStoreTokens(Context).RequestToken"
+            });
+
+            ko.applyBindings(vm, document.getElementById("sectionLogin"));
+        });
+    </script>
+}

@@ -1,0 +1,11 @@
+﻿@model CookieAuthentication.Models.HomeModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h3>@ViewData["Title"]</h3>
+<div class="row">
+    <div class="col-xs-12">
+       You are logged as <i>@Model.Name</i> (<i>@Model.Email</i>)<br /><br />
+        <a href="@Url.RouteUrl("logoff")"><i class="glyphicon glyphicon-log-out"></i> Logoff</a>
+    </div>
+</div>
