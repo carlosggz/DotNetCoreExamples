@@ -1,0 +1,117 @@
+﻿@model CustomAuthorization.Models.HomeModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h3>@ViewData["Title"]</h3>
+<div class="row" id="homeSection">
+    <div class="col-xs-12">
+        You are logged with the following visibility:
+        <br />
+        Syfy access: @Model.Channels.HasFlag(MoviesChannels.Syfy)<br />
+        Tnt access: @Model.Channels.HasFlag(MoviesChannels.Tnt)
+    </div>
+
+    <div class="col-xs-12">
+        <h4>Check access with Policies</h4>
+        <a href="#" data-bind="click: checkPolicySyfy">Syfy</a>&nbsp;
+        <a href="#" data-bind="click: checkPolicyTnt">Tnt</a>&nbsp;
+        <a href="#" data-bind="click: checkPolicyAll">All</a>&nbsp;
+    </div>
+
+    <div class="col-xs-12">
+        <h4>Check access with Claims</h4>
+        <a href="#" data-bind="click: checkClaimSyfy">Syfy</a>&nbsp;
+        <a href="#" data-bind="click: checkClaimTnt">Tnt</a>&nbsp;
+        <a href="#" data-bind="click: checkClaimAll">All</a>&nbsp;
+    </div>
+
+    <div class="col-xs-12">
+        <h4>Check access with Roles</h4>
+        <a href="#" data-bind="click: checkRoleSyfy">Syfy</a>&nbsp;
+        <a href="#" data-bind="click: checkRoleTnt">Tnt</a>&nbsp;
+        <a href="#" data-bind="click: checkRoleAll">All</a>&nbsp;
+    </div>
+
+    <div class="col-xs-12">
+        <br /><br />
+        <a href="@Url.RouteUrl("logoff")"><i class="glyphicon glyphicon-log-out"></i> Logoff</a>
+    </div>
+</div>
+@section Scripts
+    {
+    <script src="~/lib/knockout/knockout-3.4.2.js"></script>
+    <script type="text/javascript">
+        function CheckAccessVm() {
+
+            var self = this;
+
+            this.checkPolicySyfy = function () {
+
+                self._doCall("@Url.Action("Syfy", "Policy")");
+            };
+
+            this.checkPolicyTnt = function () {
+
+                self._doCall("@Url.Action("Tnt", "Policy")");
+            };
+
+            this.checkPolicyAll = function () {
+
+                self._doCall("@Url.Action("All", "Policy")");
+            };
+
+            this.checkClaimSyfy = function () {
+
+                self._doCall("@Url.Action("Syfy", "Claims")");
+            };
+
+            this.checkClaimTnt = function () {
+
+                self._doCall("@Url.Action("Tnt", "Claims")");
+            };
+
+            this.checkClaimAll = function () {
+
+                self._doCall("@Url.Action("All", "Claims")");
+            };
+
+            this.checkRoleSyfy = function () {
+
+                self._doCall("@Url.Action("Syfy", "Roles")");
+            };
+
+            this.checkRoleTnt = function () {
+
+                self._doCall("@Url.Action("Tnt", "Roles")");
+            };
+
+            this.checkRoleAll = function () {
+
+                self._doCall("@Url.Action("All", "Roles")");
+            };
+
+            this._doCall = function (url) {
+
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    success: function (data) {
+
+                        alert(data);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
+            };
+
+        }
+
+        $(document).ready(function () {
+
+            var vm = new CheckAccessVm();
+
+            ko.applyBindings(vm, document.getElementById("homeSection"));
+        });
+    </script>
+}
