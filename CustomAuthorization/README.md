@@ -1,6 +1,6 @@
 ﻿# Custom authentication
 
-This project shows how to create a custom authentication using several methods:
+This project shows how to create a custom authentication using several methods.
 
 ## Authorization methods ##
 
