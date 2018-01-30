@@ -38,9 +38,9 @@ namespace Cache.Infrastructure
 
             var options = new SqlServerCacheOptions()
             {
-                SchemaName = configuration.GetValue<string>("cacheSchema"),
-                TableName = configuration.GetValue<string>("cacheTable"),
-                ConnectionString = configuration.GetValue<string>("cacheConnection"),
+                SchemaName = configuration.GetValue<string>("sqlSchema"),
+                TableName = configuration.GetValue<string>("sqlTable"),
+                ConnectionString = configuration.GetValue<string>("sqlConnection"),
                 DefaultSlidingExpiration = _expiration
             };
 

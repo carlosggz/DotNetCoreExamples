@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Cache.Core;
 using Cache.Infrastructure;
+using CustomCache.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,6 +28,7 @@ namespace Cache
         {
             services.AddSingleton<ICustomCache, InMemoryCacheAdapter>();
             //services.AddSingleton<ICustomCache, SqlServerCacheAdapter>();
+            //services.AddSingleton<ICustomCache, RedisCacheAdapter>();
 
             services.AddMvc();
         }
